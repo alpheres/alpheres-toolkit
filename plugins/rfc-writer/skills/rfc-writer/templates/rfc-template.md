@@ -1,47 +1,134 @@
-<!--
-  PLACEHOLDER: substitua este arquivo pelo template real de RFC da sua empresa/time.
-  Mantenha os nomes das seções estáveis — o SKILL.md referencia esta estrutura.
--->
+## Informações Básicas
+- **Autor:** [nome — função/time]
+- **Data:** [AAAA-MM-DD]
+- **Status:** Em Discussão / Aprovado / Rejeitado / Implementado
+- **Área:** [time ou domínio]
 
-# RFC-XXXX: [Título]
+---
 
-| Campo     | Valor                          |
-|-----------|---------------------------------|
-| Status    | Draft / Em revisão / Aprovado / Rejeitado |
-| Autor(es) | [nome]                          |
-| Data      | [AAAA-MM-DD]                    |
-| Revisores | [nomes]                         |
+## Contexto e Problema
 
-## Resumo
+Descreva o cenário atual e por que ele é um problema. Inclua números reais
+(custo, volume, latência, contagem) sempre que existirem — eles fazem a
+diferença entre "isso é lento" e "isso adiciona 400ms em 60% das chamadas".
 
-Duas ou três frases. Alguém que não leu nada do contexto deve entender o que
-está sendo proposto só por este parágrafo.
+### Arquitetura atual
 
-## Contexto / Problema
+Se a RFC envolve sistemas, inclua um diagrama (mermaid `flowchart`) mostrando
+como funciona hoje. Destaque visualmente (cor) os pontos problemáticos.
 
-Qual problema existe hoje? Por que ele importa agora? Qual é o custo de não
-resolver?
+```mermaid
+flowchart LR
+    A["Componente A"] --> B["Componente B"]
+```
 
-## Proposta
+**Como funciona hoje:**
 
-O que está sendo proposto, em detalhe suficiente para alguém implementar.
+Descreva o fluxo atual em prosa ou bullets, explicando o "porquê" das decisões
+que existem hoje (mesmo que pareçam estranhas — geralmente havia um motivo).
 
-## Alternativas consideradas
+### Problemas identificados
 
-Para cada alternativa: o que é, por que foi descartada.
+Liste cada problema separadamente e numerado. Um problema por item, não
+misture causas diferentes num só bullet.
 
-## Riscos e trade-offs
+1. **[Nome curto do problema].** Explicação com impacto concreto.
+2. **[Nome curto do problema].** Explicação com impacto concreto.
 
-O que pode dar errado, o que estamos sacrificando ao escolher esta proposta.
+**Por que isso importa agora:**
 
-## Plano de rollout
+- Urgência ou janela de tempo (ex.: sazonalidade, deadline externo)
+- Custo/risco de não agir
+- Restrições que a solução precisa respeitar (compatibilidade, migração sem
+  perda de dado, etc.)
 
-Como isso é implementado e lançado. Etapas, ordem, reversibilidade.
+---
 
-## Métricas de sucesso
+## Solução Proposta
 
-Como saberemos, em N semanas/meses, que isso funcionou ou não.
+Resumo de uma ou duas frases do que está sendo proposto, antes de entrar em
+detalhe. Depois, descreva por componente/etapa.
 
-## Perguntas abertas
+### Visão de arquitetura proposta
 
-O que ainda não está decidido e precisa de input de quem está revisando.
+```mermaid
+flowchart LR
+    A["Novo componente"] --> B["Componente mantido"]
+```
+
+### Componentes e responsabilidades
+
+| Componente | Papel | Substitui / Convive com |
+|---|---|---|
+| [nome] | [o que faz] | [Novo / Substitui X / Mantido] |
+
+Adicione subseções (`###`) para cada parte relevante da proposta — ex.:
+divisão lógica, padronização, plano de migração, automações. Use o nível de
+detalhe necessário para alguém implementar sem precisar perguntar de volta.
+
+---
+
+## Escopo
+
+### O que está incluído
+- **O1.** [objetivo concreto e verificável]
+- **O2.** [objetivo concreto e verificável]
+
+### O que NÃO está incluído
+- **N1.** [o que fica de fora, e por quê]
+- **N2.** [o que fica de fora, e por quê]
+
+---
+
+## Impacto e Riscos
+
+### Impactos Positivos
+- [benefício concreto]
+
+### Riscos Identificados
+- **R1.** [risco]. *Impacto: Alto/Médio/Baixo.*
+- **R2.** [risco]. *Impacto: Alto/Médio/Baixo.*
+
+### Mitigações
+- **R1.** [como mitigar — mesma numeração do risco acima]
+- **R2.** [como mitigar]
+
+---
+
+## Plano de Implementação
+
+[Meta geral e recursos disponíveis em uma linha.]
+
+| Etapa | Responsável | Prazo Estimado | Dependências |
+|-------|-------------|----------------|---------------|
+| **Fase 0 — [nome]:** [o que entrega] | [time] | [prazo] | — |
+
+**Sequenciamento:**
+
+```mermaid
+flowchart LR
+    F0["Fase 0"] --> F1["Fase 1"]
+```
+
+**Dependências:**
+
+- **D1.** [o que precisa estar resolvido antes, e status atual]
+
+---
+
+## Métricas de Sucesso
+
+- **CS1.** [como saber que funcionou — verificável, não vago]
+- **CS2.** [idem]
+
+---
+
+## Discussão e Feedback
+
+**Resolvidas:**
+
+1. [pergunta/decisão] — decidido: [o quê]
+
+**Em aberto:**
+
+1. [o que ainda não está decidido e precisa de input de quem revisa]
