@@ -1,13 +1,42 @@
 ---
 name: secure-code
-description: "Ativa automaticamente via hook em toda sessão. Força validação de segurança arquitetural e princípios OWASP em todo código gerado. Também pode ser invocado manualmente para reforçar as regras ou verificar se estão ativas."
+description: "Revisa código existente (diff, arquivo ou trecho colado) contra os princípios de segurança OWASP do plugin. Use quando o usuário pedir 'review de segurança', 'checar segurança', 'secure review', ou colar código pedindo validação de segurança."
 ---
 
-# Secure Code
+# Secure Code Review
 
-Este plugin está ativo automaticamente via hook de sessão. As regras de
-segurança em `hooks/secure-code-rules.md` são injetadas no início de toda
-sessão.
+Revise o código fornecido (diff do branch, arquivo específico, ou trecho
+colado pelo usuário) contra as regras em `hooks/secure-code-rules.md`.
 
-Se invocado manualmente, confirme ao usuário que o modo está ativo e
-relembre os princípios sendo aplicados.
+## Processo
+
+1. Identifique o código a revisar (diff atual, arquivo específico, ou trecho
+   colado pelo usuário).
+2. Para cada violação encontrada, reporte:
+   - **Localização**: arquivo e linha
+   - **Princípio violado**: qual dos 8 princípios
+   - **Severidade**: Crítica / Alta / Média / Baixa
+   - **O que corrigir**: a correção específica, não genérica
+3. Ordene por severidade (Crítica primeiro).
+4. Se não houver violações, diga isso explicitamente.
+
+## Formato de saída
+
+```
+## Security Review
+
+### Crítica
+- `arquivo.ts:42` — SQL injection: query concatena input do usuário.
+  Fix: usar query parametrizada.
+
+### Alta
+- `auth.ts:15` — Token exposto em log de debug.
+  Fix: remover ou mascarar.
+
+### Sem problemas encontrados em:
+- Input validation ✓
+- Auth/authz ✓
+```
+
+Não reescreva código a menos que o usuário peça. Aponte o problema e a
+correção — ele decide quando aplicar.
