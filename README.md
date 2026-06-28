@@ -20,4 +20,4 @@ Dentro de uma sessão do Claude Code:
 ## Uso
 
 - **RFC**: peça para escrever ou revisar um RFC — a skill `rfc-writer` ativa automaticamente.
-- **Segurança**: as regras de segurança são injetadas em toda sessão. Use `/secure-review` para revisar código específico contra os princípios.
+- **Segurança**: as regras de segurança são injetadas em toda sessão. Use `/secure-code` para revisar código específico contra os princípios OWASP.
