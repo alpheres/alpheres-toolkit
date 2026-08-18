@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sed -n '/^# /,$p' \"${CLAUDE_PLUGIN_ROOT}/skills/human-tone/SKILL.md\"; exit 0",
+            "timeout": 5,
+            "statusMessage": "Loading human-tone mode..."
+          }
+        ]
+      }
+    ]
+  }
+}

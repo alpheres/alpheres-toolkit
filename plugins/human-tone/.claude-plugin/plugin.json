@@ -1,0 +1,10 @@
+{
+  "name": "human-tone",
+  "version": "1.0.0",
+  "description": "Commits, PRs e comentários escritos com tom de dev: curto, informal, sem emoji e sem cara de release note gerada por AI.",
+  "author": {
+    "name": "alpheres",
+    "url": "https://github.com/alpheres"
+  },
+  "hooks": "./hooks/hooks.json"
+}

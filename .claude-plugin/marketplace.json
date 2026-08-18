@@ -4,7 +4,7 @@
     "name": "alpheres"
   },
   "metadata": {
-    "description": "Plugins do alpheres: RFC writer + Secure Code enforcement."
+    "description": "Plugins do alpheres: RFC writer + Secure Code enforcement + Human Tone."
   },
   "plugins": [
     {
@@ -16,6 +16,11 @@
       "name": "secure-code",
       "source": "./plugins/secure-code",
       "description": "Aplica segurança (OWASP, auth, injection prevention) em todo código gerado. Ativo via hook de sessão."
+    },
+    {
+      "name": "human-tone",
+      "source": "./plugins/human-tone",
+      "description": "Tom humano em commits, PRs e comentários: curto, informal, sem emoji e sem cara de AI. Ativo via hook de sessão."
     }
   ]
 }
