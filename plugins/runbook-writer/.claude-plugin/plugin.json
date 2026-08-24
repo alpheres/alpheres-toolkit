@@ -1,0 +1,9 @@
+{
+  "name": "runbook-writer",
+  "version": "1.0.0",
+  "description": "Padroniza a escrita e revisão de runbooks operacionais: procedimento passo a passo, verificação, rollback e escalonamento seguindo um template fixo.",
+  "author": {
+    "name": "alpheres",
+    "url": "https://github.com/alpheres"
+  }
+}

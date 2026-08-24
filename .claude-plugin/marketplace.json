@@ -4,13 +4,18 @@
     "name": "alpheres"
   },
   "metadata": {
-    "description": "Plugins do alpheres: RFC writer + Secure Code enforcement + Human Tone."
+    "description": "Plugins do alpheres: RFC writer + Runbook writer + Secure Code enforcement + Human Tone."
   },
   "plugins": [
     {
       "name": "rfc-writer",
       "source": "./plugins/rfc-writer",
       "description": "Skill + comandos para escrever e revisar RFCs seguindo um template fixo."
+    },
+    {
+      "name": "runbook-writer",
+      "source": "./plugins/runbook-writer",
+      "description": "Skill + comandos para escrever e revisar runbooks operacionais (procedimento, verificação, rollback, escalonamento) seguindo um template fixo."
     },
     {
       "name": "secure-code",
