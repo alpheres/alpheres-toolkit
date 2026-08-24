@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/alpheres/alpheres-toolkit/compare/v1.1.0...v1.2.0) (2026-08-24)
+
+
+### Features
+
+* add new skill human-tone ([46a5c93](https://github.com/alpheres/alpheres-toolkit/commit/46a5c93aca48d9ad1ac3ed89978a6243521108ea))
+* add runbook-writer ([2e4212c](https://github.com/alpheres/alpheres-toolkit/commit/2e4212cf9204b34d236c73f5cdaa2f08babf2e36))
+
 ## [1.1.0](https://github.com/alpheres/alpheres-toolkit/compare/v1.0.0...v1.1.0) (2026-06-28)
 
 
