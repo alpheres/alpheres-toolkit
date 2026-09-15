@@ -1,0 +1,9 @@
+{
+  "name": "arch-writer",
+  "version": "1.0.0",
+  "description": "Padroniza a escrita e revisão de documentos que explicam arquitetura de software, cloud e rede: contexto, componentes, fluxos, topologia, dados, segurança e trade-offs seguindo um template fixo.",
+  "author": {
+    "name": "alpheres",
+    "url": "https://github.com/alpheres"
+  }
+}

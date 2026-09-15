@@ -4,7 +4,7 @@
     "name": "alpheres"
   },
   "metadata": {
-    "description": "Plugins do alpheres: RFC writer + Runbook writer + Secure Code enforcement + Human Tone."
+    "description": "Plugins do alpheres: RFC writer + Runbook writer + Arch writer + Secure Code enforcement + Human Tone."
   },
   "plugins": [
     {
@@ -16,6 +16,11 @@
       "name": "runbook-writer",
       "source": "./plugins/runbook-writer",
       "description": "Skill + comandos para escrever e revisar runbooks operacionais (procedimento, verificação, rollback, escalonamento) seguindo um template fixo."
+    },
+    {
+      "name": "arch-writer",
+      "source": "./plugins/arch-writer",
+      "description": "Skill + comandos para explicar e documentar arquitetura de software, cloud e rede (contexto, componentes, fluxos, topologia, segurança, trade-offs) seguindo um template fixo."
     },
     {
       "name": "secure-code",
